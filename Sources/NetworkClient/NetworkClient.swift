@@ -28,7 +28,7 @@ public enum NetworkClient {
             encoder: JSONEncoder = .init(),
             decoder: JSONDecoder = .init()
         ) async throws -> T {
-            guard url.isEmpty, let url = URL(string: url) else {
+            guard let url = URL(string: url) else {
                 throw NetworkError.invalidURL
             }
             
@@ -69,7 +69,7 @@ public enum NetworkClient {
             encoder: JSONEncoder = .init(),
             decoder: JSONDecoder = .init()
         ) async throws {
-            guard url.isEmpty, let url = URL(string: url) else {
+            guard let url = URL(string: url) else {
                 throw NetworkError.invalidURL
             }
             
